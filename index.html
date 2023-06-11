@@ -53,7 +53,12 @@
       margin-top: 10px;
     }
   </style>
-  
+  <script>
+    setTimeout(function() {
+      var statusDiv = document.querySelector('#status');
+      statusDiv.innerHTML = '';
+    }, 3000); // Remove the status message after 3 seconds (3000 milliseconds)
+  </script>
 </head>
 <body>
   <h1>Email Form</h1>
