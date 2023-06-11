@@ -1,0 +1,22 @@
+{
+  "name": "dell",
+  "version": "1.0.0",
+  "description": "new send mail",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OsGift/SendMail.git"
+  },
+  "keywords": [
+    "mail"
+  ],
+  "author": "Gift Ayodele",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OsGift/SendMail/issues"
+  },
+  "homepage": "https://github.com/OsGift/SendMail#readme"
+}

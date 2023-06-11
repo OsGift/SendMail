@@ -48,7 +48,7 @@
 </head>
 <body>
   <h1>Email Form</h1>
-  <form id="emailForm">
+  <form id="contact_form">
     <label for="name">Name:</label>
     <input type="text" id="name" required>
 
@@ -64,7 +64,34 @@
     <button type="submit">Send Email</button>
   </form>
 
-  <script src="app.js"></script>
-  <script src="server.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+ 
+ <script>
+const form = document.querySelector('form#contact_form');
+
+//function to send message when clicked
+function sendMsg(e){    
+    e.preventDefault();
+
+    const name = document.querySelector('#name'),
+    email = document.querySelector('#email'),
+    subject = document.querySelector('#subject'),
+    message = document.querySelector('#message');
+
+
+        Email.send({
+    SecureToken : "8c5bcb83-f84a-4108-8bb6-4e333b8d10e9",
+    To : 'devjaynie@gmail.com',
+    From : email.value,
+    Subject : subject.value,
+    Body : message.value
+}).then(
+  message => alert(message)
+);
+}
+//add event listener
+form.addEventListener('submit',sendMsg);
+       
+  </script>
 </body>
 </html>
